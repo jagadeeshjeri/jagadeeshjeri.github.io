@@ -226,16 +226,17 @@ footer em{color:var(--crimson);font-style:normal}
 <section id="pipeline" class="reveal">
   <div class="kicker">// How I ship — the rail line</div>
   <h2>The Delivery <em>Pipeline</em></h2>
-  <p class="section-sub">From commit to production across Java, .NET, MuleSoft, Power BI and Snowflake workloads — every station automated.</p>
+  <p class="section-sub">From commit to production for a cloud-native microservices app — Terraform-provisioned AWS EKS, GitHub Actions CI/CD, GitOps delivery and AIOps-driven observability, every station automated.</p>
   <div class="pipeline-wrap">
     <div class="track">
-      <div class="station"><div class="dot">👩‍💻</div><div class="name">Source</div><div class="tool">Git · Bitbucket · Azure Repos</div></div>
-      <div class="station"><div class="dot">⚙️</div><div class="name">Build</div><div class="tool">Azure DevOps · TeamCity</div></div>
-      <div class="station"><div class="dot">📦</div><div class="name">Package</div><div class="tool">Docker · JFrog Artifactory</div></div>
-      <div class="station"><div class="dot">🤖</div><div class="name">Configure</div><div class="tool">Ansible AWX / AAP</div></div>
-      <div class="station"><div class="dot">🚀</div><div class="name">Deploy</div><div class="tool">Octopus · Kubernetes · Mule Runtime</div></div>
-      <div class="station"><div class="dot">📊</div><div class="name">Observe</div><div class="tool">Dynatrace · Solarwinds</div></div>
-    </div>
+        <div class="station"><div class="dot">👩‍💻</div><div class="name">Source</div><div class="tool">Git · GitHub</div></div>
+        <div class="station"><div class="dot">⚙️</div><div class="name">Build</div><div class="tool">GitHub Actions</div></div>
+        <div class="station"><div class="dot">📦</div><div class="name">Package</div><div class="tool">Docker</div></div>
+        <div class="station"><div class="dot">🏗️</div><div class="name">Provision</div><div class="tool">Terraform (IaC)</div></div>
+        <div class="station"><div class="dot">🚀</div><div class="name">Deploy</div><div class="tool">AWS EKS · ArgoCD · Kustomize</div></div>
+        <div class="station"><div class="dot">📊</div><div class="name">Observe</div><div class="tool">Prometheus · Grafana</div></div>
+        <div class="station"><div class="dot">🧠</div><div class="name">AIOps</div><div class="tool">AWS Bedrock (Kira) · Claude Code + MCP</div></div>
+      </div>
   </div>
   <p class="pipeline-note">🚂 zero manual deployments — every release rides the automated line</p>
 </section>
