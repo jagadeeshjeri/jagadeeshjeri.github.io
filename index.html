@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jagadeesh J — Senior DevOps &amp; Platform Engineer</title>
+<meta name="author" content="Jagadeesh Jeripothula">
+<meta name="description" content="Jagadeesh Jeripothula — Senior DevOps & Platform Engineer, USA. 10+ years in Azure DevOps, MuleSoft, Kubernetes, Ansible, Cisco ACI and enterprise CI/CD for mission-critical rail transportation.">
+<meta name="keywords" content="Senior DevOps Engineer, MuleSoft Platform Architect, Azure DevOps, Kubernetes, Ansible AWX, Cisco ACI, CPKC, Jagadeesh Jeripothula">
+<meta property="og:title" content="Jagadeesh Jeripothula — Senior DevOps & Platform Engineer">
+<meta property="og:description" content="10+ years driving enterprise CI/CD transformations, integration platforms and infrastructure automation in mission-critical rail environments.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crimson:#C8102E;
+  --crimson-dark:#9A0B23;
+  --ink:#1a1a1a;
+  --ink-soft:#444;
+  --muted:#777;
+  --paper:#faf9f7;
+  --card:#ffffff;
+  --line:#e6e2dc;
+  --tint:#fbeef0;
+  --mono:'JetBrains Mono',monospace;
+  --head:'Space Grotesk',sans-serif;
+  --body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6}
+::selection{background:var(--crimson);color:#fff}
+
+/* ---------- NAV ---------- */
+nav{position:sticky;top:0;z-index:100;background:rgba(250,249,247,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--mono);font-weight:600;font-size:1.05rem;color:var(--ink);text-decoration:none}
+.logo span{color:var(--crimson)}
+.nav-links{display:flex;gap:22px;list-style:none}
+.nav-links a{font-family:var(--mono);font-size:.8rem;color:var(--ink-soft);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--crimson)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-family:var(--mono);cursor:pointer}
+@media(max-width:820px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;padding:16px 24px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+}
+
+/* ---------- LAYOUT ---------- */
+section{max-width:1100px;margin:0 auto;padding:90px 24px}
+.kicker{font-family:var(--mono);color:var(--crimson);font-size:.85rem;margin-bottom:10px}
+h2{font-family:var(--head);font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:14px}
+h2 em{color:var(--crimson);font-style:italic}
+.section-sub{color:var(--muted);max-width:640px;margin-bottom:44px}
+
+/* ---------- HERO ---------- */
+.hero{padding:110px 24px 80px;text-align:left}
+.hero .role{font-family:var(--mono);font-size:.9rem;color:var(--muted);margin-bottom:14px}
+.hero .role b{color:var(--crimson);font-weight:600}
+.hero h1{font-family:var(--head);font-size:clamp(2.6rem,7vw,4.6rem);letter-spacing:-.02em;line-height:1.05;margin-bottom:20px}
+.hero h1 span{color:var(--crimson)}
+.hero .tag{font-size:1.1rem;color:var(--ink-soft);max-width:620px;margin-bottom:36px}
+.hero .tag b{color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;max-width:720px;margin-bottom:40px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 16px;border-top:3px solid var(--crimson)}
+.stat .num{font-family:var(--head);font-size:1.9rem;font-weight:700;color:var(--crimson)}
+.stat .lbl{font-family:var(--mono);font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{font-family:var(--mono);font-size:.85rem;text-decoration:none;padding:12px 22px;border-radius:8px;transition:all .2s}
+.btn-primary{background:var(--crimson);color:#fff}
+.btn-primary:hover{background:var(--crimson-dark)}
+.btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--crimson);color:var(--crimson)}
+.badge-open{display:inline-block;font-family:var(--mono);font-size:.72rem;background:var(--tint);color:var(--crimson);border:1px solid var(--crimson);border-radius:20px;padding:4px 12px;margin-bottom:18px}
+
+/* ---------- ABOUT ---------- */
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr}}
+.about p{margin-bottom:16px;color:var(--ink-soft)}
+.about p b{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.chip{font-family:var(--mono);font-size:.78rem;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:6px 14px}
+.explore{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
+.explore h3{font-family:var(--mono);font-size:.85rem;color:var(--crimson);margin-bottom:14px}
+.explore .chip{background:var(--tint);border-color:#f0cdd3}
+
+/* ---------- PIPELINE (railway) ---------- */
+.pipeline-wrap{overflow-x:auto;padding-bottom:12px}
+.track{display:flex;align-items:stretch;gap:0;min-width:900px;position:relative;padding:30px 0}
+.track::before{content:"";position:absolute;left:2%;right:2%;top:50%;height:8px;transform:translateY(-50%);
+  background:repeating-linear-gradient(90deg,var(--ink) 0 14px,transparent 14px 26px);opacity:.18;border-radius:4px}
+.station{flex:1;position:relative;z-index:1;text-align:center;padding:0 8px}
+.station .dot{width:64px;height:64px;margin:0 auto 12px;border-radius:50%;background:var(--card);border:2.5px solid var(--crimson);display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 3px 10px rgba(200,16,46,.12)}
+.station .name{font-family:var(--head);font-weight:600;font-size:.95rem}
+.station .tool{font-family:var(--mono);font-size:.7rem;color:var(--muted)}
+.pipeline-note{font-family:var(--mono);font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px}
+
+/* ---------- SKILLS ---------- */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.skill-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;transition:transform .2s,box-shadow .2s}
+.skill-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.skill-card h3{font-family:var(--head);font-size:1.05rem;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.skill-card h3 .ico{font-size:1.3rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag-pill{font-family:var(--mono);font-size:.72rem;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:4px 10px}
+.metric-card{background:var(--crimson);color:#fff;border:none}
+.metric-card .big{font-family:var(--head);font-size:2.4rem;font-weight:700}
+.metric-card p{font-family:var(--mono);font-size:.8rem;opacity:.9}
+
+/* ---------- EXPERIENCE ---------- */
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.job{position:relative;margin-bottom:44px}
+.job::before{content:"";position:absolute;left:-30px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--crimson);border:3px solid var(--paper);box-shadow:0 0 0 2px var(--crimson)}
+.job .period{font-family:var(--mono);font-size:.75rem;color:var(--crimson)}
+.job h3{font-family:var(--head);font-size:1.25rem;margin:4px 0 2px}
+.job .title{font-family:var(--mono);font-size:.85rem;color:var(--muted);margin-bottom:12px}
+.job ul{list-style:none}
+.job li{position:relative;padding-left:20px;margin-bottom:8px;color:var(--ink-soft);font-size:.95rem}
+.job li::before{content:"▸";position:absolute;left:0;color:var(--crimson)}
+.job li b{color:var(--ink)}
+
+/* ---------- PROJECTS ---------- */
+.projects{display:grid;gap:24px}
+.project{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:32px;border-left:5px solid var(--crimson)}
+.project .live{font-family:var(--mono);font-size:.72rem;color:var(--crimson)}
+.project h3{font-family:var(--head);font-size:1.35rem;margin:8px 0 12px}
+.project p{color:var(--ink-soft);margin-bottom:16px}
+.project p b{color:var(--ink)}
+
+/* ---------- AWARDS ---------- */
+.awards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.award{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px;position:relative}
+.award .idx{font-family:var(--mono);font-size:.75rem;color:var(--muted)}
+.award .ico{font-size:1.8rem;margin:10px 0}
+.award h3{font-family:var(--head);font-size:1.05rem;margin-bottom:8px}
+.award p{font-size:.88rem;color:var(--muted)}
+
+/* ---------- CONTACT ---------- */
+.contact{text-align:center}
+.contact h2{font-size:clamp(2.2rem,6vw,3.6rem)}
+.contact .sub{color:var(--muted);margin-bottom:36px}
+.contact-links{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:26px}
+.contact-links a{font-family:var(--mono);font-size:.85rem;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 20px;transition:all .2s}
+.contact-links a:hover{border-color:var(--crimson);color:var(--crimson)}
+.loc{font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+
+/* ---------- FOOTER ---------- */
+footer{border-top:1px solid var(--line);padding:28px 24px;text-align:center;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+footer em{color:var(--crimson);font-style:normal}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#top">JAGADEESH<span>*.*</span>J</a>
+    <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">menu</button>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#pipeline">Pipeline</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Awards</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" id="top">
+  <div class="badge-open">● Open to Opportunities</div>
+  <div class="role">Senior DevOps &amp; Platform Engineer · <b>USA</b></div>
+  <h1>JAGADEESH<br><span>JERIPOTHULA</span></h1>
+  <p class="tag">Driving <b>enterprise-scale CI/CD transformations</b> for mission-critical rail transportation.<br>
+  Azure DevOps · MuleSoft · Kubernetes · Ansible · Cisco ACI</p>
+  <div class="stats">
+    <div class="stat"><div class="num">10+</div><div class="lbl">Yrs Experience</div></div>
+    <div class="stat"><div class="num">200+</div><div class="lbl">Integrations Shipped</div></div>
+    <div class="stat"><div class="num">35%</div><div class="lbl">Deploy Failures Cut</div></div>
+    <div class="stat"><div class="num">$400K+</div><div class="lbl">Cost Saved</div></div>
+  </div>
+  <div class="btns">
+    <a class="btn btn-primary" href="https://www.linkedin.com/in/jagadeeshjeri" target="_blank" rel="noopener">↗ LinkedIn</a>
+    <a class="btn btn-ghost" href="resume.pdf" download>⬇ Download Resume</a>
+  </div>
+</section>
+
+<section id="about" class="reveal">
+  <div class="kicker">// Hello, World!</div>
+  <h2>I'm <em>Jagadeesh</em></h2>
+  <div class="about-grid">
+    <div class="about">
+      <p><b>Senior DevOps &amp; Platform Engineer</b> with 10+ years of experience driving enterprise-scale CI/CD transformations, cloud and on-premises infrastructure, and integration platform engineering in <b>mission-critical rail transportation environments</b>.</p>
+      <p>Deep expertise in <b>Azure DevOps, MuleSoft, Docker, Kubernetes, Infrastructure as Code, Ansible AWX/AAP, Cisco ACI, Boomi</b>, plus Java, .NET, Snowflake and Power BI — with a strong track record of reducing deployment failures, accelerating release cycles, and standardizing DevOps practices across large cross-functional teams.</p>
+      <div class="chips">
+        <span class="chip">🔄 CI/CD Transformation</span>
+        <span class="chip">🔌 Integration Platforms</span>
+        <span class="chip">☸️ Kubernetes</span>
+        <span class="chip">🤖 Ansible Automation</span>
+        <span class="chip">🏗️ IaC</span>
+        <span class="chip">🌐 NetOps</span>
+      </div>
+    </div>
+    <div class="explore">
+      <h3>// Currently Exploring</h3>
+      <div class="chips">
+        <span class="chip">🌐 NetOps</span>
+        <span class="chip">🤖 AI Infrastructure</span>
+        <span class="chip">🔄 GitOps</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pipeline" class="reveal">
+  <div class="kicker">// How I ship — the rail line</div>
+  <h2>The Delivery <em>Pipeline</em></h2>
+  <p class="section-sub">From commit to production across Java, .NET, MuleSoft, Power BI and Snowflake workloads — every station automated.</p>
+  <div class="pipeline-wrap">
+    <div class="track">
+      <div class="station"><div class="dot">👩‍💻</div><div class="name">Source</div><div class="tool">Git · Bitbucket · Azure Repos</div></div>
+      <div class="station"><div class="dot">⚙️</div><div class="name">Build</div><div class="tool">Azure DevOps · TeamCity</div></div>
+      <div class="station"><div class="dot">📦</div><div class="name">Package</div><div class="tool">Docker · JFrog Artifactory</div></div>
+      <div class="station"><div class="dot">🤖</div><div class="name">Configure</div><div class="tool">Ansible AWX / AAP</div></div>
+      <div class="station"><div class="dot">🚀</div><div class="name">Deploy</div><div class="tool">Octopus · Kubernetes · Mule Runtime</div></div>
+      <div class="station"><div class="dot">📊</div><div class="name">Observe</div><div class="tool">Dynatrace · Solarwinds</div></div>
+    </div>
+  </div>
+  <p class="pipeline-note">🚂 zero manual deployments — every release rides the automated line</p>
+</section>
+
+<section id="skills" class="reveal">
+  <div class="kicker">// Tech Arsenal</div>
+  <h2>Skills &amp; <em>Expertise</em></h2>
+  <div class="skills-grid">
+    <div class="skill-card"><h3><span class="ico">🔀</span>Source Control</h3>
+      <div class="tags"><span class="tag-pill">Git</span><span class="tag-pill">GitHub</span><span class="tag-pill">Bitbucket</span><span class="tag-pill">TFS / Azure Repos</span><span class="tag-pill">GitLab</span></div></div>
+    <div class="skill-card"><h3><span class="ico">🔄</span>DevOps &amp; CI/CD</h3>
+      <div class="tags"><span class="tag-pill">Azure DevOps</span><span class="tag-pill">TeamCity</span><span class="tag-pill">Octopus Deploy</span><span class="tag-pill">GitHub Actions</span><span class="tag-pill">TFS 2012–2017</span><span class="tag-pill">GitOps</span></div></div>
+    <div class="skill-card"><h3><span class="ico">☁️</span>Cloud &amp; Infra Automation</h3>
+      <div class="tags"><span class="tag-pill">AWS</span><span class="tag-pill">Cisco ACI</span><span class="tag-pill">Ansible AWX / Tower</span><span class="tag-pill">Ansible AAP</span></div></div>
+    <div class="skill-card metric-card"><div class="big">200+</div><p>MuleSoft integrations delivered &amp; supported in production</p></div>
+    <div class="skill-card"><h3><span class="ico">☸️</span>Containers &amp; Orchestration</h3>
+      <div class="tags"><span class="tag-pill">Docker</span><span class="tag-pill">Kubernetes</span><span class="tag-pill">Helm</span><span class="tag-pill">JFrog Artifactory</span></div></div>
+    <div class="skill-card"><h3><span class="ico">🔌</span>Integration Platforms</h3>
+      <div class="tags"><span class="tag-pill">MuleSoft ESB v3.x / v4.x</span><span class="tag-pill">Boomi</span><span class="tag-pill">RabbitMQ</span></div></div>
+    <div class="skill-card"><h3><span class="ico">💻</span>Scripting &amp; Build Tools</h3>
+      <div class="tags"><span class="tag-pill">PowerShell</span><span class="tag-pill">Bash / Shell</span><span class="tag-pill">YAML</span><span class="tag-pill">Maven</span><span class="tag-pill">Gradle</span><span class="tag-pill">MS Build</span><span class="tag-pill">Java</span><span class="tag-pill">.NET</span></div></div>
+    <div class="skill-card metric-card"><div class="big">35%</div><p>deployment failure reduction via monitoring &amp; SLA-based alerting</p></div>
+    <div class="skill-card"><h3><span class="ico">🗄️</span>Data &amp; Reporting</h3>
+      <div class="tags"><span class="tag-pill">Snowflake</span><span class="tag-pill">SQL Server</span><span class="tag-pill">SSIS</span><span class="tag-pill">Power BI</span><span class="tag-pill">ELK Stack</span></div></div>
+    <div class="skill-card"><h3><span class="ico">📡</span>Monitoring</h3>
+      <div class="tags"><span class="tag-pill">Dynatrace</span><span class="tag-pill">Solarwinds</span><span class="tag-pill">Anypoint Monitoring</span></div></div>
+  </div>
+</section>
+
+<section id="experience" class="reveal">
+  <div class="kicker">// Career Journey</div>
+  <h2>Work <em>Experience</em></h2>
+  <div class="timeline">
+    <div class="job">
+      <div class="period">May 2023 — Present</div>
+      <h3>Canadian Pacific Kansas City (CPKC)</h3>
+      <div class="title">// Senior DevOps Engineer</div>
+      <ul>
+        <li>Architected and enforced <b>enterprise-wide DevOps standards</b> — branching, versioning, CI/CD best practices — across the unified post-merger CPKC organization</li>
+        <li>Led <b>Power BI tenant migration</b> from legacy CP &amp; KCS to unified CPKC with full Azure DevOps automation — <b>CPKC Hotshot Award, $400K+ saved</b></li>
+        <li>Automated <b>Cisco ACI fabric management</b> with Ansible playbooks via AWX on Kubernetes (AWX Operator), managing Tenants, VRFs, BDs, EPGs through the APIC REST API</li>
+        <li>Reduced deployment failure rates by <b>35%</b> via real-time pipeline monitoring and SLA-based alerting</li>
+        <li>Designed <b>Boomi CI/CD pipelines from scratch</b>; stabilized delivery across Bitbucket, TeamCity, Octopus Deploy &amp; Azure DevOps</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="period">Feb 2020 — Apr 2023</div>
+      <h3>Kansas City Southern Railway</h3>
+      <div class="title">// DevOps Engineer &amp; MuleSoft Platform Architect</div>
+      <ul>
+        <li>Owned the full <b>TFS-to-Azure DevOps migration</b> lifecycle — planning, architecture, execution</li>
+        <li>Built the <b>MuleSoft platform stack from scratch</b> (Runtime 4.3) supporting KCS S4 transformation as a C4E team</li>
+        <li>Delivered &amp; supported <b>200+ MuleSoft integrations</b>; led V3-to-V4 migration deploying 150+ apps via Azure DevOps CI/CD</li>
+        <li>Executed Mule runtime upgrade 4.2 → 4.4 across all environments with <b>zero downtime</b></li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="period">Jun 2017 — Jan 2020</div>
+      <h3>Cognier Inc (Contractor to KCS)</h3>
+      <div class="title">// Build &amp; Release Engineer</div>
+      <ul>
+        <li>Built fully automated CI/CD pipelines for MuleSoft &amp; .NET services using TFS 2017 and PowerShell</li>
+        <li>Executed <b>TFS 2012 → 2017 migration</b> in multi-server configuration incl. SQL Server Reporting Services</li>
+        <li>Migrated MuleSoft from on-prem Management Console to <b>Anypoint Hybrid Runtime Manager</b>; upgraded runtime 3.8 → 3.9</li>
+        <li>Stood up internal <b>Maven repository manager</b> with JFrog Artifactory for dependency management</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="period">Sep 2014 — Nov 2015</div>
+      <h3>Tech Mahindra, India</h3>
+      <div class="title">// Associate Software Engineer</div>
+      <ul>
+        <li>Transformed manual ad-hoc builds into a fully automated <b>Agile CI/CD process</b></li>
+        <li>Built bash/shell deployment automation for Java apps; standardized Git branching workflow</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="period">Oct 2012 — Aug 2014</div>
+      <h3>Cadsys India Ltd</h3>
+      <div class="title">// Graduate Engineer Trainee</div>
+      <ul>
+        <li>Supported telecom network facility conversions and work-order processing for Verizon database operations</li>
+        <li>Achieved <b>100% QIL quality</b> on Verizon SQL database with the Process Quality &amp; QA groups</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <div class="kicker">// What I've Built</div>
+  <h2>Key <em>Projects</em></h2>
+  <div class="projects">
+    <div class="project">
+      <span class="live">● Production</span>
+      <h3>Cisco ACI Fabric Automation via Ansible AWX on Kubernetes</h3>
+      <p>NetOps automation platform managing core ACI constructs — <b>Tenants, VRFs, Bridge Domains, Application Profiles, EPGs</b> — through the APIC REST API. Ansible playbooks orchestrated by AWX running on Kubernetes (AWX Operator) with GitOps-enhanced deployment and security.</p>
+      <div class="tags"><span class="tag-pill">Ansible</span><span class="tag-pill">AWX Operator</span><span class="tag-pill">Kubernetes</span><span class="tag-pill">Cisco ACI</span><span class="tag-pill">GitOps</span><span class="tag-pill">APIC REST API</span></div>
+    </div>
+    <div class="project">
+      <span class="live">● Award-winning · $400K+ saved</span>
+      <h3>Power BI Tenant Migration — CP + KCS → CPKC</h3>
+      <p>Led the merger-critical migration of Power BI from two legacy tenants into the unified CPKC environment with <b>full Azure DevOps CI/CD automation</b>. Recognized with the <b>CPKC Hotshot Award (Control Costs)</b>.</p>
+      <div class="tags"><span class="tag-pill">Power BI</span><span class="tag-pill">Azure DevOps</span><span class="tag-pill">PowerShell</span><span class="tag-pill">CI/CD</span></div>
+    </div>
+    <div class="project">
+      <span class="live">● Platform build · 200+ integrations</span>
+      <h3>MuleSoft Platform Build &amp; C4E — KCS S4 Transformation</h3>
+      <p>Built the MuleSoft platform stack from scratch (Runtime 4.3), delivered and supported <b>200+ integrations</b> in production, led vendor teams through V3→V4 migration (150+ apps), and executed a <b>zero-downtime</b> 4.2→4.4 runtime upgrade across all environments.</p>
+      <div class="tags"><span class="tag-pill">MuleSoft</span><span class="tag-pill">Anypoint Platform</span><span class="tag-pill">Azure DevOps</span><span class="tag-pill">Maven</span><span class="tag-pill">RabbitMQ</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements" class="reveal">
+  <div class="kicker">// Recognition</div>
+  <h2>Awards &amp; <em>Certifications</em></h2>
+  <div class="awards">
+    <div class="award"><div class="idx">01</div><div class="ico">🏆</div>
+      <h3>CPKC Hotshot Award — Control Costs</h3>
+      <p>For leading the Power BI tenant migration with $400K+ in project cost savings.</p></div>
+    <div class="award"><div class="idx">02</div><div class="ico">📜</div>
+      <h3>MuleSoft Certified Platform Architect — Level 1</h3>
+      <p>Issued June 2023.</p></div>
+    <div class="award"><div class="idx">03</div><div class="ico">📜</div>
+      <h3>MuleSoft Certified Developer — Level 1</h3>
+      <p>Issued August 2022.</p></div>
+    <div class="award"><div class="idx">04</div><div class="ico">🎓</div>
+      <h3>M.S. Computer Information Systems</h3>
+      <p>Rivier University, Nashua, NH.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="contact reveal">
+  <div class="kicker">// Get in touch</div>
+  <h2>LET'S <em>CONNECT</em></h2>
+  <p class="sub">Open to Senior DevOps / Platform / SRE roles. Let's build something reliable together.</p>
+  <div class="contact-links">
+    <a href="mailto:jagdishjerri@gmail.com">✉️ jagdishjerri@gmail.com</a>
+    <a href="https://www.linkedin.com/in/jagadeeshjeri" target="_blank" rel="noopener">💼 linkedin.com/in/jagadeeshjeri</a>
+    <a href="https://github.com/jagadeeshjeri" target="_blank" rel="noopener">🐙 github.com/jagadeeshjeri</a>
+  </div>
+  <div class="loc">United States</div>
+</section>
+
+<footer>
+  <em>JAGADEESH JERIPOTHULA</em> · Senior DevOps &amp; Platform Engineer · <span id="yr"></span>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }), { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open')));
+</script>
+</body>
+</html>
