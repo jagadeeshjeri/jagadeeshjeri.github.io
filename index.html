@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Deploy: fix Pages source to GitHub Actions - 2026-07-05 -->
+<!-- Deploy: Pipeline scoped to DevOps+AIOps Playbook - 2026-07-05 -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -91,6 +91,9 @@ h2 em{color:var(--crimson);font-style:italic}
 
 /* ---------- PIPELINE (railway) ---------- */
 .pipeline-wrap{overflow-x:auto;padding-bottom:12px}
+.pipeline-project-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.75rem;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 14px;margin-bottom:28px;color:var(--ink-soft)}
+.pipeline-project-badge .dot-live{width:8px;height:8px;border-radius:50%;background:var(--crimson);display:inline-block;flex-shrink:0}
+.pipeline-project-badge strong{color:var(--ink)}
 .track{display:flex;align-items:stretch;gap:0;min-width:900px;position:relative;padding:30px 0}
 .track::before{content:"";position:absolute;left:2%;right:2%;top:50%;height:8px;transform:translateY(-50%);
   background:repeating-linear-gradient(90deg,var(--ink) 0 14px,transparent 14px 26px);opacity:.18;border-radius:4px}
@@ -226,14 +229,18 @@ footer em{color:var(--crimson);font-style:normal}
 <section id="pipeline" class="reveal">
   <div class="kicker">// How I ship — the rail line</div>
   <h2>The Delivery <em>Pipeline</em></h2>
-  <p class="section-sub">From commit to production for a cloud-native microservices app — Terraform-provisioned AWS EKS, GitHub Actions CI/CD, GitOps delivery and AIOps-driven observability, every station automated.</p>
+  <div class="pipeline-project-badge">
+    <span class="dot-live"></span>
+    <span>Project: <strong>DevOps + AIOps Playbook — Cloud-Native Reference</strong> · Open Source · End-to-End</span>
+  </div>
+  <p class="section-sub">Every station below maps to a real tool used in this project — from a boutique microservices app on local Docker, Terraform-provisioned AWS EKS, GitHub Actions CI/CD, GitOps delivery via ArgoCD + Kustomize, Prometheus + Grafana observability, and AIOps intelligence powered by AWS Bedrock (Kira) — developed with Claude Code + MCP servers.</p>
   <div class="pipeline-wrap">
     <div class="track">
         <div class="station"><div class="dot">👩‍💻</div><div class="name">Source</div><div class="tool">Git · GitHub</div></div>
         <div class="station"><div class="dot">⚙️</div><div class="name">Build</div><div class="tool">GitHub Actions</div></div>
         <div class="station"><div class="dot">📦</div><div class="name">Package</div><div class="tool">Docker</div></div>
-        <div class="station"><div class="dot">🏗️</div><div class="name">Provision</div><div class="tool">Terraform (IaC)</div></div>
-        <div class="station"><div class="dot">🚀</div><div class="name">Deploy</div><div class="tool">AWS EKS · ArgoCD · Kustomize</div></div>
+        <div class="station"><div class="dot">🏗️</div><div class="name">Provision</div><div class="tool">Terraform · AWS EKS</div></div>
+        <div class="station"><div class="dot">🚀</div><div class="name">Deploy</div><div class="tool">ArgoCD · Kustomize · GitOps</div></div>
         <div class="station"><div class="dot">📊</div><div class="name">Observe</div><div class="tool">Prometheus · Grafana</div></div>
         <div class="station"><div class="dot">🧠</div><div class="name">AIOps</div><div class="tool">AWS Bedrock (Kira) · Claude Code + MCP</div></div>
       </div>
